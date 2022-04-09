@@ -1,0 +1,8 @@
+.logo {
+  background-image: url(../../images/Mesto-logo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 142px;
+  height: 33px;
+}

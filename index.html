@@ -4,10 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Путешествие по России</title>
+  <title>Mesto</title>
   <link rel="stylesheet" href="pages/index.css">
 </head>
-<body>
 
+<body class="page">
+  <div class="page__content">
+    <header class="header">
+      <div class="logo"></div>
+      <div class="header__line"></div>
+    </header>
+    <section class="profile">
+      <div class="profile__data">
+        <div class="avatar">
+          <img src="./images/Avatar.jpg" alt="Фотография автора." class="avatar__img">
+        </div>
+        <div class="profile__info">
+          <div class="profile__main">
+            <h2 class="profile__name">Жак-Ив Кусто</h2>
+            <button class="button edit-button" id="edit-button"></button>
+          </div>
+          <p class="profile__description">Исследователь океана</p>
+        </div>
+      </div>
+      <button class="button add-button" id="add-button"></button>
+    </section>
+  </div>
 </body>
+
 </html>
