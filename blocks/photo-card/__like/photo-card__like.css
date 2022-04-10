@@ -1,0 +1,8 @@
+.photo-card__like {
+  background-image: url(../../../images/like.svg);
+  width: 22px;
+  height: 19px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
