@@ -1,0 +1,27 @@
+.edit-profile__input {
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  height: 27px;
+  vertical-align: middle;
+  margin: 0 36px;
+  padding: 0;
+  width: calc(100% - 2*36px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.edit-profile__input:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 460px) {
+  .edit-profile__input {
+    margin: 0 22px;
+    width: calc(100% - 2*22px);
+  }
+}

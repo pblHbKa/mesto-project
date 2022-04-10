@@ -14,9 +14,3 @@
     background-size: 16px;
   }
 }
-
-.add-button:hover {
-  transition: opacity ease-out 1s;
-  opacity: .6;
-  cursor: pointer;
-}

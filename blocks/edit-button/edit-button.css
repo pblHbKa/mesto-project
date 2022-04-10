@@ -16,9 +16,3 @@
     background-size: 7.5px;
   }
 }
-
-.edit-button:hover {
-  transition: opacity ease-out 1s;
-  opacity: .6;
-  cursor: pointer;
-}

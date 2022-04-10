@@ -8,7 +8,5 @@
 }
 
 .photo-card__like:hover {
-  transition: opacity ease-out 1s;
   opacity: .5;
-  cursor: pointer;
 }
