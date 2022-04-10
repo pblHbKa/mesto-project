@@ -1,6 +1,6 @@
 # Проект: Место
 
-[Страница проекта](https://pblhbka.github.io/mesto-project/)
+[Страница проекта](https://pblhbka.github.io/mesto-project/index.html)
 
 ### Описание
 
