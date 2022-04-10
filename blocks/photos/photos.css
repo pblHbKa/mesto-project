@@ -1,18 +1,12 @@
 .photos {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 17px;
-  grid-template-rows: repeat(2, 361px);
-  row-gap: 20px;
-  grid-auto-rows: 361px;
-  grid-auto-columns: 1fr;
-  margin: 51px 0 66px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 51px auto 66px;
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:620px) {
   .photos {
-    grid-template-columns: 1fr;
-    margin: 36px 0 48px;
+    margin: 36px auto 48px;
   }
 }
