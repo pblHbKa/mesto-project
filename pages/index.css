@@ -26,6 +26,7 @@
 @import url(../blocks/photos/photos.css);
 @import url(../blocks/photo-card/photo-card.css);
 @import url(../blocks/photo-card/__like/photo-card__like.css);
+@import url(../blocks/photo-card/__like/_active/photo-card__like_active.css);
 @import url(../blocks/photo-card/__img/photo-card__img.css);
 @import url(../blocks/photo-card/__name/photo-card__name.css);
 
