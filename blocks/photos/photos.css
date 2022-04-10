@@ -9,3 +9,10 @@
   grid-auto-columns: 1fr;
   margin: 51px 0 66px;
 }
+
+@media screen and (max-width:320px) {
+  .photos {
+    grid-template-columns: 1fr;
+    margin: 36px 0 48px;
+  }
+}

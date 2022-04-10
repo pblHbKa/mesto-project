@@ -5,4 +5,12 @@
   background-image: url(../../images/Add-button.svg);
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: 22px;
+}
+
+@media screen and (max-width:320px) {
+  .add-button {
+    width: 100%;
+    background-size: 16px;
+  }
 }
