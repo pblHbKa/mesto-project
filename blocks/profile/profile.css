@@ -1,16 +1,17 @@
 .profile {
   width: 100%;
-  height: 120px;
+  min-height: 120px;
   margin: 40px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 @media screen and (max-width:600px) {
   .profile{
     flex-direction: column;
     margin-top: 42px;
-    height: 286px;
+    min-height: 286px;
   }
 }

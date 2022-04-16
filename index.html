@@ -9,81 +9,84 @@
 </head>
 
 <body class="page">
+  <header class="header">
+    <div class="logo"></div>
+  </header>
   <main class="page__content">
-    <header class="header">
-      <div class="logo logo_place_header"></div>
-      <div class="header__line"></div>
-    </header>
     <section class="profile">
       <div class="profile__data">
-        <div class="avatar">
-          <img src="./images/Avatar.jpg" alt="Фотография автора." class="avatar__img">
-        </div>
+        <img src="./images/Avatar.jpg" alt="Фотография автора." class="avatar">
         <div class="profile__info">
           <div class="profile__main">
-            <h2 class="profile__name">Беликова Наталья</h2>
-            <button type="button" class="button edit-button" id="edit-button"></button>
+            <h1 class="profile__name">Беликова Наталья</h1>
+            <button type="button" class="button profile__edit" id="edit-button"></button>
           </div>
           <p class="profile__description">Любитель нового</p>
         </div>
       </div>
-      <button type="button" class="button add-button" id="add-button"></button>
+      <button type="button" class="button profile__add" id="add-button"></button>
     </section>
     <section class="photos">
       <article class="photo-card">
         <img src="./images/Sheregesh.jpg" alt="Горнолыжный склон." class="photo-card__img">
         <div class="photo-card__info">
-          <p class="photo-card__name">Шерегеш</p>
-          <div class="button photo-card__like"></div>
+          <h2 class="photo-card__name">Шерегеш</h2>
+          <button class="button photo-card__like"></button>
         </div>
       </article>
       <article class="photo-card">
         <img src="./images/Eysk.jpg" alt="Небо и море." class="photo-card__img">
         <div class="photo-card__info">
-          <p class="photo-card__name">Ейск</p>
-          <div class="photo-card__like photo-card__like_active"></div>
+          <h2 class="photo-card__name">Ейск</h2>
+          <button class="photo-card__like photo-card__like_active"></button>
         </div>
       </article>
       <article class="photo-card">
         <img src="./images/Nikola-lenivets.jpg" alt="Костер." class="photo-card__img">
-        <p class="photo-card__name">Никола-Ленивец</p>
-        <div class="photo-card__like"></div>
+        <div class="photo-card__info">
+          <h2 class="photo-card__name">Никола-Ленивец</h2>
+          <button class="photo-card__like"></button>
+        </div>
       </article>
       <article class="photo-card">
         <img src="./images/Ergaki.jpg" alt="Лес и горы." class="photo-card__img">
         <div class="photo-card__info">
-          <p class="photo-card__name">Ергаки</p>
-          <div class="photo-card__like"></div>
+          <h2 class="photo-card__name">Ергаки</h2>
+          <button class="photo-card__like"></button>
         </div>
       </article>
       <article class="photo-card">
         <img src="./images/Pushino.jpg" alt="Мозаика на стене дома." class="photo-card__img">
         <div class="photo-card__info">
-          <p class="photo-card__name">Пущино</p>
-          <div class="photo-card__like"></div>
+          <h2 class="photo-card__name">Пущино</h2>
+          <button class="photo-card__like"></button>
         </div>
       </article>
       <article class="photo-card">
         <img src="./images/Tomsk.jpg" alt="Htrf." class="photo-card__img">
-        <p class="photo-card__name">Томск</p>
-        <div class="photo-card__like"></div>
+        <div class="photo-card__info">
+          <h2 class="photo-card__name">Томск</h2>
+          <button class="photo-card__like"></button>
+        </div>
       </article>
     </section>
-    <footer class="footer">
-      <p class="copyright">© 2022 Mesto Russia</p>
-    </footer>
-    <div class="popup">
-      <div class="popup__container">
-        <form class="edit-profile">
-          <button type="button" class="button edit-profile__close"></button>
-          <h3 class="edit-profile__title">Редактировать профиль</h3>
-          <input type="text" id="edit-profile__name" class="edit-profile__input" placeholder="Введите ваше имя">
-          <input type="text" id="edit-profile__description" class="edit-profile__input" placeholder="Несколько слов о себе">
-          <button type="submit" class="button edit-profile__save">Сохранить</button>
-        </form>
-      </div>
-    </div>
   </main>
+  <footer class="footer">
+    <p class="copyright">© 2022 Mesto Russia</p>
+  </footer>
+  <div class="popup">
+    <div class="popup__container">
+      <button type="button" class="button edit-profile__close"></button>
+      <form class="edit-profile" name="edit-profile-form">
+        <h3 class="edit-profile__title">Редактировать профиль</h3>
+        <input type="text" id="edit-profile__name" name="edit-profile__name" class="edit-profile__input"
+          placeholder="Введите ваше имя">
+        <input type="text" id="edit-profile__description" name="edit-profile__description" class="edit-profile__input"
+          placeholder="Несколько слов о себе">
+        <button type="submit" class="button edit-profile__save" name="edit-profile__save">Сохранить</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>

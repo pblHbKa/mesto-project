@@ -7,6 +7,12 @@
   height: 33px;
 }
 
+@media screen and (max-width: 879px) {
+  .logo {
+    margin-left: 27px;
+  }
+}
+
 @media screen and (max-width:320px) {
   .logo {
     width: 103.74px;

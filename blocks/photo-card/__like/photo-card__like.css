@@ -2,9 +2,10 @@
   background-image: url(../../../images/like.svg);
   width: 22px;
   height: 19px;
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
+  margin: 0 30px;
+  border: 0;
+  background-color: unset;
+  cursor: pointer;
 }
 
 .photo-card__like:hover {

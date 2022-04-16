@@ -2,11 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 51px auto 66px;
+  margin: 51px auto 47px;
 }
 
 @media screen and (max-width:620px) {
   .photos {
-    margin: 36px auto 48px;
+    margin: 36px auto 28px;
   }
 }

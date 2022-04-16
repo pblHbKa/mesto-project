@@ -3,7 +3,7 @@
   border-radius: 10px;
   position: relative;
   width: 282px;
-  height: 361px;
+  min-height: 361px;
   margin: 0 17px 20px 0;
 }
 
@@ -21,6 +21,14 @@
 
 @media screen and (max-width:618px) {
   .photo-card {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width:350px) {
+  .photo-card {
     margin-right: 0;
+    margin-left: 0;
   }
 }
