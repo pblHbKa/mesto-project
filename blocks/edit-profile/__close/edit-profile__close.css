@@ -12,7 +12,7 @@
   background-color: unset;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 550px) {
   .edit-profile__close {
     background-size: 20px;
     width: 20px;
