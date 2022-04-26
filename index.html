@@ -27,48 +27,6 @@
       <button type="button" class="button profile__add" id="add-button"></button>
     </section>
     <section class="photos">
-      <article class="photo-card">
-        <img src="./images/Sheregesh.jpg" alt="Горнолыжный склон." class="photo-card__img">
-        <div class="photo-card__info">
-          <h2 class="photo-card__name">Шерегеш</h2>
-          <button type="button" class="button photo-card__like"></button>
-        </div>
-      </article>
-      <article class="photo-card">
-        <img src="./images/Eysk.jpg" alt="Небо и море." class="photo-card__img">
-        <div class="photo-card__info">
-          <h2 class="photo-card__name">Ейск</h2>
-          <button type="button" class="photo-card__like photo-card__like_active"></button>
-        </div>
-      </article>
-      <article class="photo-card">
-        <img src="./images/Nikola-lenivets.jpg" alt="Костер." class="photo-card__img">
-        <div class="photo-card__info">
-          <h2 class="photo-card__name">Никола-Ленивец</h2>
-          <button type="button" class="photo-card__like"></button>
-        </div>
-      </article>
-      <article class="photo-card">
-        <img src="./images/Ergaki.jpg" alt="Лес и горы." class="photo-card__img">
-        <div class="photo-card__info">
-          <h2 class="photo-card__name">Ергаки</h2>
-          <button type="button" class="photo-card__like"></button>
-        </div>
-      </article>
-      <article class="photo-card">
-        <img src="./images/Pushino.jpg" alt="Мозаика на стене дома." class="photo-card__img">
-        <div class="photo-card__info">
-          <h2 class="photo-card__name">Пущино</h2>
-          <button type="button" class="photo-card__like"></button>
-        </div>
-      </article>
-      <article class="photo-card">
-        <img src="./images/Tomsk.jpg" alt="Htrf." class="photo-card__img">
-        <div class="photo-card__info">
-          <h2 class="photo-card__name">Томск</h2>
-          <button type="button" class="photo-card__like"></button>
-        </div>
-      </article>
     </section>
   </main>
   <footer class="footer">
@@ -87,6 +45,16 @@
       </form>
     </div>
   </div>
+  <template id="photo-card">
+    <article class="photo-card">
+      <img src="./images/Tomsk.jpg" alt="Htrf." class="photo-card__img">
+      <div class="photo-card__info">
+        <h2 class="photo-card__name">Томск</h2>
+        <button type="button" class="photo-card__like"></button>
+      </div>
+    </article>
+  </template>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
