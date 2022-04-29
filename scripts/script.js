@@ -1,4 +1,5 @@
-const profileEdit = document.querySelector('.popup');
+const profileEdit = document.querySelector('.popup-form');
+const imageView = document.querySelector('.popup-image');
 const formElement = document.querySelector('.edit-profile');
 const nameInput = document.querySelector('#edit-profile__name');
 const descriptionInput = document.querySelector('#edit-profile__description');
@@ -37,7 +38,8 @@ const initialCards = [
 
 document.querySelector('#edit-button').addEventListener('click', openPopUp);
 document.querySelector('#add-button').addEventListener('click', openPopUpCard);
-document.querySelector('.edit-profile__close').addEventListener('click', closePopUp);
+document.querySelector('#edit-profile__close').addEventListener('click', closePopUp);
+document.querySelector('#popup-image__close').addEventListener('click', closeImagePopUp);
 formElement.addEventListener('submit', formSubmitHandler);
 
 function formSubmitHandler(evt) {
@@ -81,16 +83,37 @@ function closePopUp(evt) {
   profileEdit.classList.remove('popup_opened');
 }
 
+function openImagePopUp(evt) {
+  imageView.classList.add('popup_opened');
+
+  imageView.querySelector('.popup-image__name').textContent = evt.target.closest('.photo-card').querySelector('.photo-card__name').textContent;
+  imageView.querySelector('.popup-image__image').src = evt.target.closest('.photo-card').querySelector('.photo-card__img').src;
+
+}
+
+function closeImagePopUp(evt) {
+  imageView.classList.remove('popup_opened');
+}
+
 function addCard(name, src) {
   const photoCard = cardTemplate.querySelector('.photo-card').cloneNode(true);
+
   photoCard.querySelector('.photo-card__name').textContent = name;
   photoCard.querySelector('.photo-card__img').src = src;
+
   photoCard.querySelector('.photo-card__like').addEventListener('click', likePhoto);
+  photoCard.querySelector('.photo-card__delete').addEventListener('click', deletePhoto);
+  photoCard.addEventListener('click', openImagePopUp);
+
   sectionPhoto.prepend(photoCard);
 }
 
 function likePhoto(evt) {
   evt.target.classList.toggle('photo-card__like_active');
+}
+
+function deletePhoto(evt) {
+  evt.target.closest('.photo-card').remove();
 }
 
 initialCards.forEach(elem => { addCard(elem.name, elem.link) });

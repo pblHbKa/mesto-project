@@ -5,12 +5,13 @@
   width: 282px;
   min-height: 361px;
   margin: 0 17px 20px 0;
+  cursor: pointer;
 }
 
 @media screen and (min-width:918px) {
-.photo-card:nth-child(3n) {
-  margin-right: 0;
-}
+  .photo-card:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width:917px) and (min-width:619px) {

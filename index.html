@@ -32,9 +32,9 @@
   <footer class="footer">
     <p class="copyright">© 2022 Mesto Russia</p>
   </footer>
-  <div class="popup">
+  <div class="popup popup-form">
     <div class="popup__container">
-      <button type="button" class="button edit-profile__close"></button>
+      <button type="button" class="button popup__close" id="edit-profile__close"></button>
       <form class="edit-profile" name="edit-profile-form">
         <h3 class="edit-profile__title">Редактировать профиль</h3>
         <input type="text" id="edit-profile__name" name="edit-profile__name" class="edit-profile__input"
@@ -45,6 +45,15 @@
       </form>
     </div>
   </div>
+  <div class="popup popup-image">
+    <div class="popup-image__container">
+      <button type="button" class="button popup__close" id="popup-image__close"></button>
+      <figure>
+        <img src="" class="popup-image__image">
+        <figcaption class="popup-image__name"></figcaption>
+       </figure>
+    </div>
+  </div>
   <template id="photo-card">
     <article class="photo-card">
       <img src="./images/Tomsk.jpg" alt="Htrf." class="photo-card__img">
@@ -52,9 +61,9 @@
         <h2 class="photo-card__name">Томск</h2>
         <button type="button" class="photo-card__like"></button>
       </div>
+      <button type="button" class="photo-card__delete"></button>
     </article>
   </template>
   <script src="scripts/script.js"></script>
 </body>
-
 </html>
