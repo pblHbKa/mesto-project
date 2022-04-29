@@ -12,27 +12,27 @@ const sectionPhoto = document.querySelector('.photos');
 const initialCards = [
   {
     name: 'Шерегеш',
-    link: '../images/Sheregesh.jpg'
+    link: './images/Sheregesh.jpg'
   },
   {
     name: 'Ейск',
-    link: '../images/Eysk.jpg'
+    link: './images/Eysk.jpg'
   },
   {
     name: 'Никола-Ленивец',
-    link: '../images/Nikola-lenivets.jpg'
+    link: './images/Nikola-lenivets.jpg'
   },
   {
     name: 'Ергаки',
-    link: '../images/Ergaki.jpg'
+    link: './images/Ergaki.jpg'
   },
   {
     name: 'Пущино',
-    link: '../images/Pushino.jpg'
+    link: './images/Pushino.jpg'
   },
   {
     name: 'Томск',
-    link: '../images/Tomsk.jpg'
+    link: './images/Tomsk.jpg'
   }
 ];
 
@@ -87,7 +87,7 @@ function openImagePopUp(evt) {
   imageView.classList.add('popup_opened');
 
   imageView.querySelector('.popup-image__name').textContent = evt.target.closest('.photo-card').querySelector('.photo-card__name').textContent;
-  imageView.querySelector('.popup-image__image').src = evt.target.closest('.photo-card').querySelector('.photo-card__img').src;
+  imageView.querySelector('.popup-image__image').src = evt.target.src;
 
 }
 
@@ -103,7 +103,7 @@ function addCard(name, src) {
 
   photoCard.querySelector('.photo-card__like').addEventListener('click', likePhoto);
   photoCard.querySelector('.photo-card__delete').addEventListener('click', deletePhoto);
-  photoCard.addEventListener('click', openImagePopUp);
+  photoCard.querySelector('.photo-card__img').addEventListener('click', openImagePopUp);
 
   sectionPhoto.prepend(photoCard);
 }
