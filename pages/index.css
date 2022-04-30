@@ -35,9 +35,9 @@
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 
-@import url(../blocks/edit-profile/__title/edit-profile__title.css);
-@import url(../blocks/edit-profile/__input/edit-profile__input.css);
-@import url(../blocks/edit-profile/__save/edit-profile__save.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/button/_save/button_save.css);
 @import url(../blocks/popup/__close/popup__close.css);
 
 @import url(../blocks/popup-image/popup-image.css);

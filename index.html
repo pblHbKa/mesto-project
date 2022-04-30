@@ -36,12 +36,25 @@
     <div class="popup__container">
       <button type="button" class="button popup__close" id="edit-profile__close"></button>
       <form class="edit-profile" name="edit-profile-form">
-        <h3 class="edit-profile__title">Редактировать профиль</h3>
-        <input type="text" id="edit-profile__name" name="edit-profile__name" class="edit-profile__input"
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <input type="text" id="edit-profile__name" name="edit-profile__name" class="popup__input"
           placeholder="Введите ваше имя">
-        <input type="text" id="edit-profile__description" name="edit-profile__description" class="edit-profile__input"
+        <input type="text" id="edit-profile__description" name="edit-profile__description" class="popup__input"
           placeholder="Несколько слов о себе">
-        <button type="submit" class="button edit-profile__save" name="edit-profile__save">Сохранить</button>
+        <button type="submit" class="button button_save" name="edit-profile__save">Сохранить</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup-new-card">
+    <div class="popup__container">
+      <button type="button" class="button popup__close" id="new-card__close"></button>
+      <form name="new-card-form">
+        <h3 class="popup__title">Новое место</h3>
+        <input type="text" id="new-card__name" name="new-card__name" class="popup__input"
+          placeholder="Название">
+        <input type="text" id="new-card__src" name="new-card__src" class="popup__input"
+          placeholder="Ссылка на картинку">
+        <button type="button" class="button button_save" name="new-card__save" id="new-card__save">Сохранить</button>
       </form>
     </div>
   </div>

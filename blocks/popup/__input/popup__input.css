@@ -1,4 +1,4 @@
-.edit-profile__input {
+.popup__input {
   border: 0;
   outline: none;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -15,12 +15,12 @@
   overflow: hidden;
 }
 
-.edit-profile__input:not(:first-of-type) {
+.popup__input:not(:first-of-type) {
   margin-top: 30px;
 }
 
 @media screen and (max-width: 550px) {
-  .edit-profile__input {
+  .popup__input {
     margin: 0 22px;
     width: calc(100% - 2*22px);
   }
