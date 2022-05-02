@@ -91,20 +91,21 @@ function openImagePopUp(evt) {
 }
 
 function addCard(name, src) {
-  photoCard = createCard(name, src);
+  const photoCard = createCard(name, src);
   sectionPhoto.prepend(photoCard);
 }
 
 function createCard(name, src) {
   const photoCard = cardTemplate.querySelector('.photo-card').cloneNode(true);
+  const photoCardImg = photoCard.querySelector('.photo-card__img');
 
   photoCard.querySelector('.photo-card__name').textContent = name;
-  photoCard.querySelector('.photo-card__img').src = src;
-  photoCard.querySelector('.photo-card__img').alt = name;
+  photoCardImg.src = src;
+  photoCardImg.alt = name;
 
   photoCard.querySelector('.photo-card__like').addEventListener('click', likePhoto);
   photoCard.querySelector('.photo-card__delete').addEventListener('click', deletePhoto);
-  photoCard.querySelector('.photo-card__img').addEventListener('click', openImagePopUp);
+  photoCardImg.addEventListener('click', openImagePopUp);
 
   return photoCard;
 }
