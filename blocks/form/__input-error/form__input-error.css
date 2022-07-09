@@ -1,0 +1,9 @@
+.form__input-error {
+  color: #f00;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.21;
+  margin: 5px 36px 0;
+  display: inline-block;
+  width: calc(100% - 2*36px);
+}

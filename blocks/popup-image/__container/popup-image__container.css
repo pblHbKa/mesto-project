@@ -1,4 +1,5 @@
 .popup-image__container {
   margin: auto;
   position: relative;
+  cursor: default;
 }
