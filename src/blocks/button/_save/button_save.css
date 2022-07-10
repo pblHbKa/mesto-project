@@ -6,7 +6,7 @@
   line-height: 1.21;
   text-align: center;
   width: 358px;
-  margin: 48px auto 37px;
+  margin: 18px auto 37px;
   display: block;
   height: 50px;
   border: 1px solid #000;
@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 550px) {
   .button_save {
-    margin: 45px auto 25px;
+    margin: 15px auto 25px;
     font-size: 14px;
     width: 238px;
   }
