@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto</title>
-  <link rel="stylesheet" href="pages/index.css">
 </head>
 
 <body class="page">
@@ -15,7 +14,7 @@
   <main class="page__content">
     <section class="profile">
       <div class="profile__data">
-        <img src="./images/Avatar.jpg" alt="Фотография автора." class="avatar">
+        <img src="<%=require('./images/Avatar.jpg')%>" alt="Фотография автора." class="avatar">
         <div class="profile__info">
           <div class="profile__main">
             <h1 class="profile__name">Беликова Наталья</h1>
@@ -73,7 +72,7 @@
   </div>
   <template id="photo-card">
     <article class="photo-card">
-      <img src="./images/Tomsk.jpg" alt="Htrf." class="photo-card__img">
+      <img src="<%=require('./images/Tomsk.jpg')%>" alt="Htrf." class="photo-card__img">
       <div class="photo-card__info">
         <h2 class="photo-card__name">Томск</h2>
         <button type="button" class="photo-card__like"></button>
@@ -81,6 +80,5 @@
       <button type="button" class="photo-card__delete"></button>
     </article>
   </template>
-  <script src="scripts/script.js"></script>
 </body>
 </html>

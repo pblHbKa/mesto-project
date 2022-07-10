@@ -1,3 +1,12 @@
+import './styles/index.css';
+
+import Eysk from './images/Eysk.jpg';
+import Nikolalenivets from './images/Nikola-lenivets.jpg';
+import Ergaki from './images/Ergaki.jpg';
+import Pushino from './images/Pushino.jpg';
+import Tomsk from './images/Tomsk.jpg';
+import Sheregesh from './images/Sheregesh.jpg';
+
 const profileEdit = document.querySelector('.popup-form');
 const newCard = document.querySelector('.popup-new-card');
 const imageView = document.querySelector('.popup-image');
@@ -18,27 +27,27 @@ const imageViewImage = imageView.querySelector('.popup-image__image');
 const initialCards = [
   {
     name: 'Шерегеш',
-    link: './images/Sheregesh.jpg'
+    link: Sheregesh
   },
   {
     name: 'Ейск',
-    link: './images/Eysk.jpg'
+    link: Eysk
   },
   {
     name: 'Никола-Ленивец',
-    link: './images/Nikola-lenivets.jpg'
+    link: Nikolalenivets
   },
   {
     name: 'Ергаки',
-    link: './images/Ergaki.jpg'
+    link: Ergaki
   },
   {
     name: 'Пущино',
-    link: './images/Pushino.jpg'
+    link: Pushino
   },
   {
     name: 'Томск',
-    link: './images/Tomsk.jpg'
+    link: Tomsk
   }
 ];
 
