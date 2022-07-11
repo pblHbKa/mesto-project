@@ -51,7 +51,7 @@ function createCard(name, src) {
 
   photoCard.querySelector('.photo-card__like').addEventListener('click', likePhoto);
   photoCard.querySelector('.photo-card__delete').addEventListener('click', deletePhoto);
-  photoCardImg.addEventListener('click', openImagePopUp);
+  photoCardImg.addEventListener('click', (evt) => {openImagePopUp(evt.target.src, evt.target.closest('.photo-card').querySelector('.photo-card__name').textContent)});
 
   return photoCard;
 }

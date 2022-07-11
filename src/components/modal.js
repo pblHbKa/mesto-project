@@ -1,4 +1,3 @@
-import {validateForm} from './validate.js';
 import {addCard} from './card.js';
 
 const profileEdit = document.querySelector('.popup-form');
@@ -22,15 +21,15 @@ newCardForm.addEventListener('submit', handleNewCardFormSubmit);
 function openPopup(popup) {
   popup.classList.add('popup_opened');
 
-  popup.addEventListener('click', chekOpenPopup);
-  document.addEventListener('keydown', chekOpenPopup);
+  popup.addEventListener('mousedown', handleOverlay);
+  document.addEventListener('keydown', handleEscape);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
 
-  popup.removeEventListener('click', chekOpenPopup);
-  document.removeEventListener('keydown', chekOpenPopup);
+  popup.removeEventListener('mousedown', handleOverlay);
+  document.removeEventListener('keydown', handleEscape);
 }
 
 function openProfilePopup(evt) {
@@ -38,28 +37,32 @@ function openProfilePopup(evt) {
 
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileDescription.textContent;
-  validateForm(profileForm);
+  profileForm.querySelector('.button_save').classList.add('button_inactive');
 }
 
 function openCardPopup(evt) {
   openPopup(newCard);
 
   newCardForm.reset();
-  validateForm(newCardForm);
+  newCardForm.querySelector('.button_save').classList.add('button_inactive');
 }
 
-function openImagePopUp(evt) {
+function openImagePopUp(src, name) {
   openPopup(imageView);
 
-  imageViewName.textContent = evt.target.closest('.photo-card').querySelector('.photo-card__name').textContent;
-  imageViewImage.src = evt.target.src;
-  imageViewImage.alt = imageViewName.textContent;
+  imageViewName.textContent = name;
+  imageViewImage.src = src;
+  imageViewImage.alt = name;
 }
 
-function chekOpenPopup(evt) {
-  if(evt.type === 'click' && evt.target.classList.contains('popup')) {
+function handleOverlay(evt) {
+  if(evt.target.classList.contains('popup')) {
     closePopup(evt.target);
-  } else if (evt.type === 'keydown' && evt.key === 'Escape') {
+  }
+};
+
+function handleEscape(evt) {
+  if (evt.key === 'Escape') {
     closePopup(document.querySelector('.popup_opened'));
   }
 };
@@ -88,4 +91,4 @@ popups.forEach((popup) => {
   })
 });
 
-export {openProfilePopup, openCardPopup, handleProfileFormSubmit, handleNewCardFormSubmit, chekOpenPopup, openImagePopUp};
+export {openProfilePopup, openCardPopup, handleProfileFormSubmit, handleNewCardFormSubmit, openImagePopUp};
