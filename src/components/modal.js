@@ -1,4 +1,5 @@
 import {addCard} from './card.js';
+import {disabledButton} from './utils.js';
 
 const profileEdit = document.querySelector('.popup-form');
 const nameInput = document.querySelector('#edit-profile__name');
@@ -37,14 +38,14 @@ function openProfilePopup(evt) {
 
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileDescription.textContent;
-  profileForm.querySelector('.button_save').classList.add('button_inactive');
+  disabledButton(profileForm.querySelector('.button_save'), 'button_inactive');
 }
 
 function openCardPopup(evt) {
   openPopup(newCard);
 
   newCardForm.reset();
-  newCardForm.querySelector('.button_save').classList.add('button_inactive');
+  disabledButton(newCardForm.querySelector('.button_save'), 'button_inactive');
 }
 
 function openImagePopUp(src, name) {

@@ -1,4 +1,4 @@
-let  inactiveButtonClass;
+import {disabledButton, enabledButton} from './utils.js';
 
 function showInputError(formElement, inputElement, errorMessage, classInputTypeError, classInputErrorActive) {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
@@ -22,9 +22,9 @@ function hasInvalidInput(inputList) {
 
 function toggleButtonState(inputList, buttonElement, inactiveButtonClass) {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(inactiveButtonClass);
+    disabledButton(buttonElement, inactiveButtonClass)
   } else {
-    buttonElement.classList.remove(inactiveButtonClass);
+    enabledButton(buttonElement, inactiveButtonClass);
   }
 };
 
