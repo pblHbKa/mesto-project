@@ -7,7 +7,6 @@ const cardTemplate = document.querySelector('#photo-card').content;
 
 function newCard(name, src) {
   addCardAPI(name, src)
-    .then(res => res.json())
     .then(res => {
       addCard(name, src, res._id, res.owner._id);
     })
@@ -48,14 +47,12 @@ function createCard(name, src, cardId, ownerId, likes) {
 function likePhoto(likeButton, activeClass, cardId, likeNumber) {
   if (likeButton.classList.contains(activeClass)) {
     unlikeCard(cardId)
-      .then(res => res.json())
       .then(res => {
         likeButton.classList.remove(activeClass);
         likeNumber.textContent = res.likes.length;
       })
   } else {
     likeCard(cardId)
-      .then(res => res.json())
       .then(res => {
         likeButton.classList.add(activeClass);
         likeNumber.textContent = res.likes.length;
@@ -65,16 +62,12 @@ function likePhoto(likeButton, activeClass, cardId, likeNumber) {
 
 function deletePhoto(photoCard, cardId) {
   deleteCard(cardId)
-    .then(res => {
-      console.log(res);
-      if (res.ok) {
-        photoCard.remove();
-      }
+    .then(() => {
+      photoCard.remove();
     })
 }
 
 getInitialCards()
-  .then(res => res.json())
   .then((res) => {
     res.forEach(elem => { addCard(elem.name, elem.link, elem._id, elem.owner._id, elem.likes) });
   });

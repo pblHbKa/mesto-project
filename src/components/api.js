@@ -11,7 +11,11 @@ export const getInitialCards = () => {
     headers: {
       authorization: config.headers.authorization
     }
-  });
+  })
+    .then(res => checkResult(res))
+    .catch((err) => {
+      console.log(err);
+    });
 }
 
 export const addCard = (cardName, cardAbout) => {
@@ -25,7 +29,8 @@ export const addCard = (cardName, cardAbout) => {
       name: cardName,
       link: cardAbout
     })
-  });
+  })
+    .then(res => checkResult(res));
 }
 
 export const deleteCard = (cardId) => {
@@ -34,7 +39,8 @@ export const deleteCard = (cardId) => {
     headers: {
       authorization: config.headers.authorization
     }
-  });
+  })
+    .then(res => checkResult(res));
 }
 
 export const likeCard = (cardId) => {
@@ -43,7 +49,8 @@ export const likeCard = (cardId) => {
     headers: {
       authorization: config.headers.authorization
     }
-  });
+  })
+    .then(res => checkResult(res));
 }
 
 export const unlikeCard = (cardId) => {
@@ -52,7 +59,8 @@ export const unlikeCard = (cardId) => {
     headers: {
       authorization: config.headers.authorization
     }
-  });
+  })
+    .then(res => checkResult(res));
 }
 
 export const getProfileInfo = () => {
@@ -60,7 +68,8 @@ export const getProfileInfo = () => {
     headers: {
       authorization: config.headers.authorization
     }
-  });
+  })
+    .then(res => checkResult(res));
 }
 
 export const updateProfileInfo = (profileName, profileAbout) => {
@@ -74,7 +83,8 @@ export const updateProfileInfo = (profileName, profileAbout) => {
       name: profileName,
       about: profileAbout
     })
-  });
+  })
+    .then(res => checkResult(res));
 }
 
 export const updateAvatar = (profileAvatar) => {
@@ -87,5 +97,14 @@ export const updateAvatar = (profileAvatar) => {
     body: JSON.stringify({
       avatar: profileAvatar
     })
-  });
+  })
+    .then(res => checkResult(res));
+}
+
+const checkResult = (res) => {
+  if (res.ok) {
+    return res.json();
+  } else {
+    return Promise.reject(`Ошибка: ${res.status}`);
+  }
 }

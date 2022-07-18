@@ -82,18 +82,21 @@ function handleEscape(evt) {
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
+  profileForm.querySelector('#edit-profile__save').textContent = "Сохранение...";
   saveProfileInfo(nameInput.value, descriptionInput.value);
   closePopup(profileEdit);
 }
 
 function handleNewCardFormSubmit(evt) {
   evt.preventDefault();
+  newCardForm.querySelector('#new-card__save').textContent = "Создание...";
   newCard(nameCardInput.value, srcCardInput.value);
   closePopup(newCardPopup);
 }
 
 function handleAvatarFormSubmit(evt) {
   evt.preventDefault();
+  avatarForm.querySelector('#avatar__save').textContent = "Сохранение...";
   setNewAvatar(avatarNewImg.value);
   closePopup(avatarPopup);
 }

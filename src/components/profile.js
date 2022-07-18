@@ -11,7 +11,6 @@ avatar.addEventListener('click', openAvatarPopup);
 
 function saveProfileInfo(newName, newDescription) {
   updateProfileInfo(newName, newDescription)
-    .then(res => res.json())
     .then(res => {
       setProfileData(res.name, res.about);
     })
@@ -19,14 +18,12 @@ function saveProfileInfo(newName, newDescription) {
 
 function setNewAvatar(img) {
   updateAvatar(img)
-  .then(res => res.json())
   .then(res => {
     setAvatarImg(res.avatar);
   });
 }
 
 getProfileInfo()
-  .then(res => res.json())
   .then((res) => {
     setProfileData(res.name, res.about);
     setAvatarImg(res.avatar);
