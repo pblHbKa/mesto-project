@@ -1,0 +1,19 @@
+.avatar__overlay {
+  background-color: #000;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background-image: url(../../../images/Edit-button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 26px;
+}
+
+.avatar:hover .avatar__overlay {
+  display: block;
+  cursor: none;
+}
