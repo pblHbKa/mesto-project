@@ -14,13 +14,16 @@
   <main class="page__content">
     <section class="profile">
       <div class="profile__data">
-        <img src="<%=require('./images/Avatar.jpg')%>" alt="Фотография автора." class="avatar">
+        <div class="avatar">
+          <img src="" alt="Фотография автора." class="avatar__img">
+          <div class="avatar__overlay"></div>
+        </div>
         <div class="profile__info">
           <div class="profile__main">
-            <h1 class="profile__name">Беликова Наталья</h1>
+            <h1 class="profile__name"></h1>
             <button type="button" class="button profile__edit" id="edit-button"></button>
           </div>
-          <p class="profile__description">Любитель нового</p>
+          <p class="profile__description"></p>
         </div>
       </div>
       <button type="button" class="button profile__add" id="add-button"></button>
@@ -42,7 +45,7 @@
         <input type="text" id="edit-profile__description" name="edit-profile__description" class="popup__input"
           placeholder="Несколько слов о себе" required minlength="2" maxlength="200">
         <span class="form__input-error edit-profile__description-error"></span>
-        <button type="submit" class="button button_save" name="edit-profile__save">Сохранить</button>
+        <button type="submit" class="button button_save" name="edit-profile__save" id="edit-profile__save">Сохранить</button>
       </form>
     </div>
   </div>
@@ -51,13 +54,13 @@
       <button type="button" class="button popup__close" id="new-card__close"></button>
       <form class="form new-card-form" name="new-card-form">
         <h3 class="popup__title">Новое место</h3>
-        <input type="text" id="new-card__name" name="new-card__name" class="popup__input"
-          placeholder="Название" required minlength="2" maxlength="30">
+        <input type="text" id="new-card__name" name="new-card__name" class="popup__input" placeholder="Название"
+          required minlength="2" maxlength="30">
         <span class="form__input-error new-card__name-error"></span>
-        <input type="url" id="new-card__src" name="new-card__src" class="popup__input"
-          placeholder="Ссылка на картинку" required>
+        <input type="url" id="new-card__src" name="new-card__src" class="popup__input" placeholder="Ссылка на картинку"
+          required>
         <span class="form__input-error new-card__src-error"></span>
-        <button type="submit" class="button button_save" name="new-card__save" id="new-card__save">Сохранить</button>
+        <button type="submit" class="button button_save" name="new-card__save" id="new-card__save">Создать</button>
       </form>
     </div>
   </div>
@@ -67,18 +70,34 @@
       <figure>
         <img src="" class="popup-image__image">
         <figcaption class="popup-image__name"></figcaption>
-       </figure>
+      </figure>
+    </div>
+  </div>
+  <div class="popup popup-avatar">
+    <div class="popup__container popup-avatar__container">
+      <button type="button" class="button popup__close" id="avatar__close"></button>
+      <form class="form avatar-form" name="avatar-form">
+        <h3 class="popup__title">Обновить аватар</h3>
+        <input type="url" id="avatar__src" name="avatar__src" class="popup__input" placeholder="Ссылка на картинку"
+          required>
+        <span class="form__input-error avatar__src-error"></span>
+        <button type="submit" class="button button_save" name="avatar__save" id="avatar__save">Сохранить</button>
+      </form>
     </div>
   </div>
   <template id="photo-card">
     <article class="photo-card">
-      <img src="<%=require('./images/Tomsk.jpg')%>" alt="Htrf." class="photo-card__img">
+      <img src="" alt="" class="photo-card__img">
       <div class="photo-card__info">
         <h2 class="photo-card__name">Томск</h2>
-        <button type="button" class="photo-card__like"></button>
+        <div class="photo-card__like-info">
+          <button type="button" class="photo-card__like"></button>
+          <span class="photo-card__like-number"></span>
+        </div>
       </div>
       <button type="button" class="photo-card__delete"></button>
     </article>
   </template>
 </body>
+
 </html>
