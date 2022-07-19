@@ -13,9 +13,6 @@ export const getInitialCards = () => {
     }
   })
     .then(res => checkResult(res))
-    .catch((err) => {
-      console.log(err);
-    });
 }
 
 export const addCard = (cardName, cardAbout) => {

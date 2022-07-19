@@ -1,15 +1,22 @@
-import { openImagePopUp } from './modal.js';
-import { getInitialCards, addCard as addCardAPI, likeCard, unlikeCard, deleteCard } from './api.js';
-import { idProfile } from './profile.js';
+import { openImagePopUp, closePopup } from './modal.js';
+import { addCard as addCardAPI, likeCard, unlikeCard, deleteCard } from './api.js';
+import { idProfile } from '../index.js';
 
 const sectionPhoto = document.querySelector('.photos');
 const cardTemplate = document.querySelector('#photo-card').content;
 
-function newCard(name, src) {
+function newCard(name, src, buttonSave, newCardPopup) {
+  buttonSave.textContent = "Создание...";
+
   addCardAPI(name, src)
     .then(res => {
       addCard(name, src, res._id, res.owner._id);
+      closePopup(newCardPopup);
     })
+    .catch((err) => {
+      console.log(err);
+    })
+    .finally(() => {buttonSave.textContent = "Создать";})
 }
 
 function addCard(name, src, cardId, ownerId, likes = []) {
@@ -51,12 +58,18 @@ function likePhoto(likeButton, activeClass, cardId, likeNumber) {
         likeButton.classList.remove(activeClass);
         likeNumber.textContent = res.likes.length;
       })
+      .catch((err) => {
+        console.log(err);
+      })
   } else {
     likeCard(cardId)
       .then(res => {
         likeButton.classList.add(activeClass);
         likeNumber.textContent = res.likes.length;
-      });
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 }
 
@@ -65,11 +78,9 @@ function deletePhoto(photoCard, cardId) {
     .then(() => {
       photoCard.remove();
     })
+    .catch((err) => {
+      console.log(err);
+    })
 }
 
-getInitialCards()
-  .then((res) => {
-    res.forEach(elem => { addCard(elem.name, elem.link, elem._id, elem.owner._id, elem.likes) });
-  });
-
-export { newCard };
+export { newCard, addCard };

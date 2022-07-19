@@ -82,23 +82,17 @@ function handleEscape(evt) {
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
-  profileForm.querySelector('#edit-profile__save').textContent = "Сохранение...";
-  saveProfileInfo(nameInput.value, descriptionInput.value);
-  closePopup(profileEdit);
+  saveProfileInfo(nameInput.value, descriptionInput.value, profileForm.querySelector('#edit-profile__save'), profileEdit);
 }
 
 function handleNewCardFormSubmit(evt) {
   evt.preventDefault();
-  newCardForm.querySelector('#new-card__save').textContent = "Создание...";
-  newCard(nameCardInput.value, srcCardInput.value);
-  closePopup(newCardPopup);
+  newCard(nameCardInput.value, srcCardInput.value, newCardForm.querySelector('#new-card__save'), newCardPopup);
 }
 
 function handleAvatarFormSubmit(evt) {
   evt.preventDefault();
-  avatarForm.querySelector('#avatar__save').textContent = "Сохранение...";
-  setNewAvatar(avatarNewImg.value);
-  closePopup(avatarPopup);
+  setNewAvatar(avatarNewImg.value, avatarForm.querySelector('#avatar__save'), avatarPopup);
 }
 
 popups.forEach((popup) => {
@@ -109,4 +103,4 @@ popups.forEach((popup) => {
   })
 });
 
-export { openProfilePopup, openCardPopup, openAvatarPopup, handleProfileFormSubmit, handleNewCardFormSubmit, openImagePopUp };
+export { openProfilePopup, openCardPopup, openAvatarPopup, handleProfileFormSubmit, handleNewCardFormSubmit, openImagePopUp, closePopup };
