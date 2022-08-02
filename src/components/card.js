@@ -22,6 +22,13 @@ function newCard(name, src, buttonSave, newCardPopup) {
 function addCard(name, src, cardId, ownerId, likes = []) {
   const photoCard = createCard(name, src, cardId, ownerId, likes);
   sectionPhoto.prepend(photoCard);
+  photoCard.querySelector('.photo-card__img').onerror = () => {
+    if(ownerId === idProfile) {
+      deletePhoto(photoCard, cardId);
+    } else {
+      photoCard.remove();
+    }
+  };
 }
 
 function createCard(name, src, cardId, ownerId, likes) {
